@@ -1,0 +1,3 @@
+To jest przyklad.
+W swoim pliku prosze wpisac tylko imie i nazwisko.
+Nazwa pliku musi byc 'imie_nazwisko.txt'
