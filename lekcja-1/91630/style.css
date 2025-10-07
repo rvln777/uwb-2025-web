@@ -1,0 +1,40 @@
+body {
+  background-color: #f0f8ff; 
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 20px;
+}
+
+#info-box {
+  background-color: #fff8dc; 
+  border: 2px solid #333; 
+  padding: 20px; 
+  margin: 20px 0; 
+  border-radius: 8px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2a52be; 
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #333; 
+  font-size: 18px;
+  line-height: 1.6; 
+  margin: 10px 0;
+  padding: 5px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+.highlight {
+  border: 2px dashed #2a52be;
+}
+
+#info-box p {
+  color: #800000; 
+  font-style: italic;
+}
