@@ -7,6 +7,7 @@ Add a <title> tag in the <head> section.
 Text and Headings:
 Use <h1> to <h6> tags to create headings.
 Add a paragraph of text using the <p> tag.
+create <div> elements with text.
 
 Links and Images:
 Add a clickable link using the <a> tag.
