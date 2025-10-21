@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Przykładowa strona HTML</title>
+</head>
+<body>
+
+  <!-- NAGŁÓWEK STRONY -->
+  <header>
+    <h1>Moja Strona Internetowa</h1>
+    <p>Witamy na stronie demonstracyjnej z formularzem, tabelą i strukturą semantyczną.</p>
+  </header>
+
+  <!-- GŁÓWNA SEKCJA STRONY -->
+  <main>
+
+    <!-- FORMULARZ -->
+    <section>
+      <h2>Formularz rejestracyjny</h2>
+      <form action="#" method="post">
+        <label for="username">Nazwa użytkownika:</label><br>
+        <input type="text" id="username" name="username" placeholder="Wpisz nazwę użytkownika" required><br><br>
+
+        <label for="email">Adres e-mail:</label><br>
+        <input type="email" id="email" name="email" placeholder="Wpisz adres e-mail" required><br><br>
+
+        <label for="password">Hasło:</label><br>
+        <input type="password" id="password" name="password" placeholder="Wpisz hasło" required><br><br>
+
+        <button type="submit">Zarejestruj się</button>
+      </form>
+    </section>
+
+    <!-- ARTYKUŁ Z TABELĄ PRODUKTÓW -->
+    <article>
+      <h2>Nasze produkty</h2>
+      <p>Poniżej znajduje się tabela z przykładowymi produktami i ich opisami:</p>
+
+      <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Nazwa produktu</th>
+            <th>Cena</th>
+            <th>Opis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Telefon X200</td>
+            <td>2499 zł</td>
+            <td>Nowoczesny smartfon z ekranem OLED i aparatem 108 MP.</td>
+          </tr>
+          <tr>
+            <td>Laptop ProBook</td>
+            <td>3999 zł</td>
+            <td>Wydajny laptop do pracy biurowej i zadań kreatywnych.</td>
+          </tr>
+          <tr>
+            <td>Słuchawki SoundMax</td>
+            <td>499 zł</td>
+            <td>Bezprzewodowe słuchawki z redukcją szumów i długim czasem pracy.</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+  </main>
+
+  <!-- STOPKA STRONY -->
+  <footer>
+    <p>&copy; 2025 Moja Strona. Wszystkie prawa zastrzeżone.</p>
+  </footer>
+
+</body>
+</html>
