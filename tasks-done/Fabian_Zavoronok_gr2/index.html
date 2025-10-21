@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fabian — Sample Page</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <h1>web-dev-intro-2.md</h1>
+    </header>
+
+    <main>
+        <section aria-labelledby="signup-heading">
+            <header>
+                <h2 id="signup-heading">Sign up</h2>
+            </header>
+
+            <div class="flex-demo">
+                <div class="box">Box 1</div>
+                <div class="box">Box 2</div>
+                <div class="box">Box 3</div>
+            </div>
+
+            <article>
+            <form id="signup-form" action="#" method="post" novalidate>
+                <div class="form-row">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required minlength="3" placeholder="Your username">
+                </div>
+
+                <div class="form-row">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="you@example.com">
+                </div>
+
+                <div class="form-row">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required minlength="6"
+                        placeholder="Choose a password">
+                </div>
+
+                <div class="form-row">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+            </article>
+        </section>
+
+        <section aria-labelledby="js-demos-heading">
+            <header>
+                <h2 id="js-demos-heading">JavaScript Demos</h2>
+            </header>
+
+            <article>
+                <p>
+                    <button id="btn-log">Click me (log & alert)</button>
+                </p>
+
+                <p>
+                    <button id="btn-color">Change box color</button>
+                </p>
+
+                <div id="color-box"
+                    style="width:50%;height:40px;border:1px solid #ccc;border-radius:6px;margin-top:0.5rem;">
+                    Color box (click the button to change my background)
+                </div>
+            </article>
+        </section>
+
+        <section aria-labelledby="products-heading">
+            <header>
+                <h2 id="products-heading">Products</h2>
+            </header>
+
+            <table border="1" cellpadding="5" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A</td>
+                        <td>10.00€</td>
+                        <td>High-quality item for everyday use.</td>
+                    </tr>
+                    <tr>
+                        <td>B</td>
+                        <td>25.50€</td>
+                        <td>Durable and reliable product with extended warranty.</td>
+                    </tr>
+                    <tr>
+                        <td>C</td>
+                        <td>7.99€</td>
+                        <td>Economical choice with good performance.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Fabian — Example page</p>
+    </footer>
+
+    <script src="./scrypt.js" defer></script>
+</body>
+
+</html>
