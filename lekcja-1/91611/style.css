@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tasks Example</title>
+
+    <style>
+        /* ==============================
+           Background Colors
+        ============================== */
+        body {
+            background-color: #f0f4f8; /* light background for the page */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        div {
+            background-color: #ffffff; /* white background for div */
+            border: 2px solid #007acc; /* blue border */
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        /* ==============================
+           Styling Text
+        ============================== */
+        h1 {
+            color: #007acc;         /* blue color */
+            font-size: 2.5em;       /* larger size */
+            font-style: italic;     /* italicized */
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #333333;
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin: 10px 0;
+            padding: 5px;
+        }
+
+        /* ==============================
+           CSS Selectors
+        ============================== */
+        /* Tag selector example */
+        h2 {
+            color: #ff6600;
+        }
+
+        /* Class selector example */
+        .highlight {
+            color: #008000;         /* green text */
+            font-weight: bold;
+            background-color: #e6ffe6;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        /* ID selector example */
+        #special-text {
+            color: #cc0000;         /* red text */
+            text-decoration: underline;
+            font-size: 1.2em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to the CSS Example</h1>
+    <h2>Subheading Styled with Tag Selector</h2>
+    <p>This paragraph shows how we can change font color, size, and spacing using CSS.</p>
+    <p class="highlight">This text uses a <strong>class selector</strong> for custom styling.</p>
+    <p id="special-text">This line uses an <strong>ID selector</strong> for unique styling.</p>
+
+    <div>
+        <h3>Div Section</h3>
+        <p>This div has its own background color, border, padding, and margin.</p>
+    </div>
+
+</body>
+</html>
