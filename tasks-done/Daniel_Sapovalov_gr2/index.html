@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zadania HTML, CSS i JS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Moja Strona</h1>
+  </header>
+
+  <main>
+    <!-- FORMULARZ -->
+    <section>
+      <h2>Formularz rejestracyjny</h2>
+      <form id="signupForm">
+        <label for="username">Nazwa użytkownika:</label>
+        <input type="text" id="username" name="username" placeholder="np. Janek">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="np. jan@wp.pl">
+
+        <label for="password">Hasło:</label>
+        <input type="password" id="password" name="password">
+
+        <button type="submit">Wyślij</button>
+      </form>
+    </section>
+
+    <!-- TABELA -->
+    <section>
+      <h2>Tabela produktów</h2>
+      <table border="1">
+        <tr>
+          <th>Nazwa</th>
+          <th>Cena</th>
+          <th>Opis</th>
+        </tr>
+        <tr>
+          <td>Myszka</td>
+          <td>50 euro</td>
+          <td>Bezprzewodowa myszka komputerowa</td>
+        </tr>
+        <tr>
+          <td>Klawiatura</td>
+          <td>100 euro</td>
+          <td>Podświetlana klawiatura</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- FLEXBOX -->
+    <section>
+      <h2>Przykład Flexbox</h2>
+      <div class="flex-container">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+      </div>
+    </section>
+
+    <!-- POZYCJONOWANIE -->
+    <section>
+      <h2>Pozycjonowanie</h2>
+      <div class="relative-box">
+        To element z <b>position: relative</b>
+        <div class="absolute-box">To element absolute</div>
+      </div>
+      <div class="fixed-box">To element fixed (zostaje przy przewijaniu)</div>
+    </section>
+
+    <!-- HOVER I TRANSITION -->
+    <section>
+      <h2>Hover i Transition</h2>
+      <a href="#" class="hover-link">Najedź na mnie</a>
+    </section>
+
+    <!-- JAVASCRIPT -->
+    <section>
+      <h2>JavaScript</h2>
+
+      <button id="clickBtn">Kliknij mnie</button>
+
+      <br><br>
+      <button id="sumBtn">Oblicz sumę tablicy</button>
+      <button id="doubleBtn">Podwój wartości</button>
+
+      <br><br>
+      <input type="number" id="numberInput" placeholder="Podaj liczbę">
+      <button id="checkBtn">Sprawdź parzystość</button>
+
+      <br><br>
+      <div id="colorBox" class="color-box">Kliknij przycisk, by zmienić kolor</div>
+      <button id="colorBtn">Zmień kolor</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Moja Strona</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
