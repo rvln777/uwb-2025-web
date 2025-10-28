@@ -1,0 +1,49 @@
+body {
+  background-color: lavenderblush;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1, h2 {
+  color: purple;
+  text-align: center;
+}
+
+p {
+  color: darkslategray;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+div {
+  background-color: pink;
+  border: 2px solid purple;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+a:hover {
+  color: hotpink;
+}
+
+ol, ul {
+  margin-left: 40px;
+}
+
+
+button {
+  background-color: purple;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: hotpink;
+}
