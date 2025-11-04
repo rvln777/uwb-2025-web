@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML / CSS / JS – Zadania Demo</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #121a30;
+      --muted: #a7b1c2;
+      --text: #e7ecf4;
+      --accent: #5ae3b3;
+      --accent-2: #7aa3ff;
+      --danger: #ff6b6b;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 14px;
+    }
+
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background: radial-gradient(1200px 800px at 10% 0%, #111a33 0%, var(--bg) 60%), linear-gradient(135deg, #0b1020 0%, #0b1020 100%);
+      line-height: 1.5;
+    }
+
+    /* -------- Semantic layout -------- */
+    header {
+      position: sticky; /* shows positioning: fixed-like behavior but scrolls with page */
+      top: 0;
+      backdrop-filter: blur(8px);
+      background: rgba(11,16,32,.7);
+      box-shadow: var(--shadow);
+      z-index: 100;
+    }
+    .container { max-width: 1000px; margin: 0 auto; padding: 24px; }
+    .title { font-size: clamp(24px, 4vw, 40px); margin: 8px 0; }
+    .subtitle { color: var(--muted); margin-top: -6px; }
+
+    main { display: grid; gap: 24px; padding-block: 24px; }
+
+    section { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); }
+    section > .section-inner { padding: 24px; }
+    section h2 { margin: 0 0 12px; font-size: 22px; }
+
+    footer { text-align: center; color: var(--muted); padding: 24px; }
+
+    /* -------- Forms -------- */
+    form { display: grid; gap: 12px; max-width: 560px; }
+    label { display: grid; gap: 6px; }
+    input[type="text"], input[type="email"], input[type="password"] {
+      padding: 12px 14px; border-radius: 10px; border: 1px solid #223;
+      background: #0e1427; color: var(--text);
+    }
+    .btn {
+      padding: 12px 16px; border: 0; border-radius: 12px; cursor: pointer;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+      color: #06101b; font-weight: 700; box-shadow: var(--shadow);
+    }
+
+    /* -------- Table -------- */
+    table { width: 100%; border-collapse: collapse; overflow: hidden; border-radius: 12px; }
+    thead { background: #0f1a36; }
+    th, td { text-align: left; padding: 12px 14px; }
+    tbody tr:nth-child(odd) { background: #0d152c; }
+    tbody tr:nth-child(even) { background: #0b1330; }
+    td.price { white-space: nowrap; }
+
+    /* -------- Flexbox -------- */
+    .flex-demo {
+      display: flex; /* display:flex aligns child items horizontally by default */
+      gap: 12px; flex-wrap: wrap;
+    }
+    .flex-card {
+      flex: 1 1 220px; min-height: 120px; background: #0f1831; border-radius: 14px; padding: 16px; position: relative; overflow: hidden;
+    }
+    .flex-card .badge { /* positioning absolute inside relative parent */
+      position: absolute; top: 12px; right: 12px; background: #1d2b53; color: #cde2ff; padding: 4px 8px; border-radius: 999px; font-size: 12px;
+    }
+
+    .flex-controls { display: flex; gap: 8px; margin-top: 12px; }
+
+    /* -------- Positioning demo -------- */
+    .fixed-banner { /* positioning: fixed */
+      position: fixed; bottom: 16px; right: 16px; background: #0f1f3f; border: 1px solid #253a6d; color: #cfe2ff; padding: 10px 14px; border-radius: 12px; box-shadow: var(--shadow);
+    }
+
+    /* -------- Transitions & hover -------- */
+    .fancy-link { color: var(--accent); text-decoration: none; font-weight: 600; }
+    .fancy-link { transition: color .3s ease; } /* smooth color animation */
+    .fancy-link:hover { color: var(--danger); }
+
+    /* Utilities */
+    .grid { display: grid; gap: 12px; }
+    .muted { color: var(--muted); }
+    .code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; background: #0c142a; padding: 8px 10px; border-radius: 8px; }
+    .row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+    .chip { background: #152246; color: #cfe2ff; padding: 4px 8px; border-radius: 999px; font-size: 12px; }
+    .demo-box { width: 100%; max-width: 420px; height: 120px; background: #111a38; border-radius: 12px; border: 1px solid #243a6b; display: grid; place-items: center; }
+    .mono { font-family: ui-monospace, Menlo, Consolas, monospace; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="title">Zadania HTML • CSS • JavaScript</div>
+      <p class="subtitle">Kompletny przykład z formularzem, tabelą, semantycznym układem, Flexboksem, pozycjonowaniem, efektami hover i skryptami JS.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- ===== Semantic HTML: article/section/header/footer used across the page ===== -->
+
+    <section id="forms">
+      <div class="section-inner">
+        <h2>1) Formulárz (HTML → Forms)</h2>
+        <p class="muted">Pola: <span class="chip">Username</span> <span class="chip">Email</span> <span class="chip">Password</span> + przycisk <span class="chip">submit</span>.</p>
+        <form onsubmit="event.preventDefault(); alert('Formularz wysłany (demo)!');">
+          <label>
+            Nazwa użytkownika
+            <input type="text" id="username" name="username" placeholder="np. jan_kowalski" required />
+          </label>
+          <label>
+            Email
+            <input type="email" id="email" name="email" placeholder="np. jan@example.com" required />
+          </label>
+          <label>
+            Hasło
+            <input type="password" id="password" name="password" placeholder="••••••••" required />
+          </label>
+          <button class="btn" type="submit">Wyślij</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="table">
+      <div class="section-inner">
+        <h2>2) Tabela Produktów (HTML → Table)</h2>
+        <p class="muted">Kolumny: <span class="chip">Name</span> <span class="chip">Price</span> <span class="chip">Description</span>.</p>
+        <div style="overflow:auto">
+          <table aria-label="Tabela produktów">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Wireless Mouse</td>
+                <td class="price">$19.99</td>
+                <td>Lekka, z cichymi przyciskami i sensorem 1600 DPI.</td>
+              </tr>
+              <tr>
+                <td>Mechanical Keyboard</td>
+                <td class="price">$79.00</td>
+                <td>Hot-swap, podświetlenie RGB, układ ISO.</td>
+              </tr>
+              <tr>
+                <td>USB-C Hub</td>
+                <td class="price">$29.50</td>
+                <td>HDMI 4K, 2× USB-A, czytnik kart SD.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="semantic">
+      <div class="section-inner">
+        <h2>3) Semantyczny układ (HTML → &lt;article&gt;, &lt;section&gt;, &lt;header&gt;, &lt;footer&gt;)</h2>
+        <article>
+          <header>
+            <h3 style="margin:0">Artykuł przykładowy</h3>
+            <p class="muted" style="margin:6px 0 0">Wykorzystuje semantyczne znaczniki do logicznej struktury treści.</p>
+          </header>
+          <section class="grid" style="margin-top:12px">
+            <p>To jest treść artykułu. Znaczniki semantyczne pomagają czytnikom ekranu i SEO zrozumieć strukturę strony.</p>
+            <p>Więcej o semantyce: <a class="fancy-link" href="#" onclick="event.preventDefault()">przeczytaj w dokumentacji</a>.</p>
+          </section>
+          <footer style="margin-top:12px" class="muted">Autor: Dev • Data: <span id="today"></span></footer>
+        </article>
+      </div>
+    </section>
+
+    <section id="flex">
+      <div class="section-inner">
+        <h2>1) Flexbox (CSS → display:flex)</h2>
+        <div class="row">
+          <button class="btn" id="toggleFlex">Przełącz kierunek (row/column)</button>
+          <span class="muted">Aktualny: <span id="flexDir" class="code">row</span></span>
+        </div>
+        <div class="flex-demo" id="flexDemo" style="margin-top:12px">
+          <div class="flex-card">
+            <span class="badge">absolute</span>
+            <h4 style="margin:0 0 6px">Karta A</h4>
+            <p class="muted">Element 1 w kontenerze flex.</p>
+          </div>
+          <div class="flex-card">
+            <span class="badge">absolute</span>
+            <h4 style="margin:0 0 6px">Karta B</h4>
+            <p class="muted">Element 2 w kontenerze flex.</p>
+          </div>
+          <div class="flex-card">
+            <span class="badge">absolute</span>
+            <h4 style="margin:0 0 6px">Karta C</h4>
+            <p class="muted">Element 3 w kontenerze flex.</p>
+          </div>
+        </div>
+        <p class="muted" style="margin-top:10px">Karty mają <span class="code">position: relative</span>, a znaczniki <span class="code">.badge</span> są <span class="code">position: absolute</span> — demonstruje to pozycjonowanie.</p>
+      </div>
+    </section>
+
+    <section id="positioning">
+      <div class="section-inner">
+        <h2>2) Pozycjonowanie (relative / absolute / fixed)</h2>
+        <div class="grid">
+          <div class="demo-box" id="colorBox">Kliknij przycisk, aby zmienić tło tego boxa</div>
+          <div class="row">
+            <button class="btn" id="randomColorBtn">Zmień kolor tła (DOM)</button>
+            <a class="fancy-link" href="#top" onclick="event.preventDefault(); window.scrollTo({top:0, behavior:'smooth'});">Powrót na górę</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="transitions">
+      <div class="section-inner">
+        <h2>3) Efekty :hover + transition</h2>
+        <p>Najedź na ten link: <a class="fancy-link" href="#" onclick="event.preventDefault()">link z efektem</a>. Kolor płynnie zmienia się dzieki <span class="code">transition: color .3s</span>.</p>
+      </div>
+    </section>
+
+    <section id="js">
+      <div class="section-inner">
+        <h2>JavaScript: Zdarzenia, Pętle/Tablice, Warunki, DOM</h2>
+
+        <div class="grid">
+          <div>
+            <h3 style="margin:0 0 6px">1) Event Handling</h3>
+            <button class="btn" id="eventBtn">Kliknij mnie</button>
+            <p class="muted">Po kliknięciu zobaczysz <span class="code">console.log()</span> i okno <span class="code">alert()</span>.</p>
+          </div>
+
+          <div>
+            <h3 style="margin:0 0 6px">2) Pętle i Tablice</h3>
+            <div class="row">
+              <button class="btn" id="sumBtn">Oblicz sumę tablicy</button>
+              <button class="btn" id="doubleBtn">Podwój tablicę (map)</button>
+            </div>
+            <p class="muted">Wyniki pojawią się w konsoli i tutaj: <span id="arrayOut" class="code">(brak)</span></p>
+          </div>
+
+          <div>
+            <h3 style="margin:0 0 6px">3) Instrukcje warunkowe</h3>
+            <div class="row">
+              <input type="number" id="numInput" placeholder="Wpisz liczbę" class="mono" style="padding:8px 10px; border-radius:8px; border:1px solid #223; background:#0e1427; color:var(--text)">
+              <button class="btn" id="checkBtn">Sprawdź parzystość</button>
+            </div>
+            <p class="muted">Wynik: <span id="evenOdd" class="code">(oczekiwanie)</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="fixed-banner" aria-live="polite">
+    <strong>Fixed</strong> — ten baner używa <span class="mono">position: fixed</span>.
+  </div>
+
+  <footer>
+    Zrobione z ❤️ • <span class="muted">Demo edukacyjne</span>
+  </footer>
+
+  <script>
+    // Ustaw dzisiejszą datę w artykule
+    document.getElementById('today').textContent = new Date().toLocaleDateString('pl-PL');
+
+    // ===== JS 1) Event handling =====
+    document.getElementById('eventBtn').addEventListener('click', () => {
+      console.log('Button Clicked!');
+      alert('Button Clicked!');
+    });
+
+    // ===== JS 2) Pętle i Tablice =====
+    const numbers = [2, 4, 6, 8, 10];
+    document.getElementById('sumBtn').addEventListener('click', () => {
+      let sum = 0;
+      for (let i = 0; i < numbers.length; i++) {
+        sum += numbers[i];
+      }
+      console.log('Tablica:', numbers);
+      console.log('Suma (for loop):', sum);
+      document.getElementById('arrayOut').textContent = `Suma: ${sum}`;
+    });
+
+    document.getElementById('doubleBtn').addEventListener('click', () => {
+      const doubled = numbers.map(n => n * 2);
+      console.log('Tablica:', numbers);
+      console.log('Podwojone (map):', doubled);
+      document.getElementById('arrayOut').textContent = `Podwojone: [${doubled.join(', ')}]`;
+    });
+
+    // ===== JS 3) Instrukcje warunkowe (even/odd) =====
+    document.getElementById('checkBtn').addEventListener('click', () => {
+      const val = Number(document.getElementById('numInput').value);
+      if (Number.isNaN(val)) {
+        console.log('Podaj poprawną liczbę.');
+        document.getElementById('evenOdd').textContent = 'Podaj poprawną liczbę!';
+        return;
+      }
+      const result = (val % 2 === 0) ? 'even (parzysta)' : 'odd (nieparzysta)';
+      console.log(`Liczba ${val} jest ${result}.`);
+      document.getElementById('evenOdd').textContent = `Liczba ${val} jest ${result}.`;
+    });
+
+    // ===== JS 4) DOM Manipulation: losowy kolor tła diva =====
+    const colorBox = document.getElementById('colorBox');
+    document.getElementById('randomColorBtn').addEventListener('click', () => {
+      const randomColor = () => '#' + Math.floor(Math.random() * 0xFFFFFF).toString(16).padStart(6, '0');
+      const c = randomColor();
+      colorBox.style.background = c;
+      colorBox.textContent = `Nowy kolor: ${c}`;
+    });
+
+    // ===== CSS Flexbox live toggle (row/column) =====
+    const flex = document.getElementById('flexDemo');
+    const dirOut = document.getElementById('flexDir');
+    document.getElementById('toggleFlex').addEventListener('click', () => {
+      const next = (getComputedStyle(flex).flexDirection === 'row') ? 'column' : 'row';
+      flex.style.flexDirection = next;
+      dirOut.textContent = next;
+    });
+  </script>
+</body>
+</html>
