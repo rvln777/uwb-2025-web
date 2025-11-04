@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moje Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Witaj na moim portfolio!</h1>
+    </header>
+
+    <section id="media">
+        <h2>Multimedia</h2>
+        <video width="320" height="240" controls autoplay>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Twoja przeglądarka nie obsługuje wideo.
+        </video>
+
+        <audio controls autoplay>
+            <source src="http://emgregion.hostingradio.ru:8064/moscow.retrofm.mp3" type="audio/mpeg">
+            Twoja przeglądarka nie obsługuje odtwarzania audio.
+        </audio>
+    </section>
+
+    <section id="api-data">
+        <h2>Dane pobrane z API</h2>
+        <div id="content"></div>
+        <button id="loadData">Załaduj dane</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Moje Portfolio</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
