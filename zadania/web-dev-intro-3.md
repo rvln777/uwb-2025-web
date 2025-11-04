@@ -1,7 +1,7 @@
 HTML Tasks:
 Use HTML and CSS to create a layout for a portfolio website.
-Add an area in the <body> for dynamically loaded content using JavaScript.
-Embed a video using the <video> tag and a song using the <audio> tag.
+Add an area in the `<body>` for dynamically loaded content using JavaScript.
+Embed a video using the `<video>` tag and a song using the `<audio>` tag.
 Add controls for playback, and autoplay the media.
 
 
