@@ -1,0 +1,31 @@
+table, th, td {
+  border: 1px solid black;
+}
+
+.elementy {
+      display: flex;
+      position: relative;          
+      justify-content: center;
+      align-items: center;     
+      height: 100px;
+      background-color: #ececec;
+      gap: 10px;    
+                  
+}
+a{
+  color: #0077cc;
+  text-decoration: none;
+  transition: color 0.3s ease;  
+}
+a:hover {
+  color: #ff6347;
+}
+
+.texty {
+  align-items: center;
+  position: static;
+}
+
+.Table {
+  align-items: center;
+}
