@@ -1,0 +1,31 @@
+.withChilds{
+    display: flex ;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+#table{
+    position: relative;
+
+}
+
+a{
+    color: chartreuse;
+    text-decoration: dashed;
+    transition: color 3s ease;
+}
+
+a:hover{
+    color: rgb(255, 0, 0);
+}
+
+.special{
+    color: white;
+    transition: color 4s ease;
+}
+
+.special:hover{
+    color: black;
+}
+

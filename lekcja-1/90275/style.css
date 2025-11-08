@@ -1,0 +1,54 @@
+h1 {
+    color: darkblue;
+    font-size: 32px;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+p {
+    color: #333333;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* Background Colors */
+body {
+    background-color: #edf7c8; /* AliceBlue */
+}
+
+.colored-box {
+    background-color: #faebd7; /* AntiqueWhite */
+    border: 2px solid #8b4513; /* SaddleBrown border */
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* CSS Selectors */
+h2 {
+    color: darkgreen;
+}
+        
+.example {
+    color: darkred;
+    font-weight: bold;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+#example {
+    color: purple;
+    font-size: 18px;
+    margin-top: 15px;
+    padding: 8px;
+    border: 2px solid #ccc;
+}
+
+#cos {
+    color: orange;
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px dashed #ff6600;
+}

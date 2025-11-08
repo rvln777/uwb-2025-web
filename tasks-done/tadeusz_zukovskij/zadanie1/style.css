@@ -1,0 +1,60 @@
+h1{
+    text-align: center;
+}
+
+p{
+    background: linear-gradient(to right, #00bfff, #87cefa, #f0e68c);
+    color: #002244;              /* dark navy-blue for strong contrast */
+    padding: 10px 15px;          /* space inside the paragraph */
+    border-radius: 8px;          /* smooth rounded corners */
+    display: inline-block;
+}
+
+h3{
+    text-align: center;
+    font-size: 40px;
+}
+h5{
+    font-size: 30px;
+}
+h6{
+    font-size: 40px;
+}
+
+body {
+  background: linear-gradient(to bottom, #00bfff, #87cefa, #f0e68c);
+}
+
+div{
+   background: linear-gradient(to bottom right, #a8edea, #fed6e3);
+   width: fit-content;
+   margin: 10px;
+   
+
+}
+#Crew_order{
+    background: linear-gradient(to top, #ff9966, #ff5e62, #ffd86f);
+    font-size: 20px;
+    width: fit-content;
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 25px;
+    border: 4px dashed black;
+    position: relative;
+    margin: 0 auto;
+
+
+
+}
+
+.Image {
+    margin: 0 auto;
+}
+
+.Crew_order .Order{
+    font-size: 20px
+}
+
+.Rest_Crew .rest_ul{
+    font-size: 20px
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Page Title</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="zad3.css">
+<style>
+</style>
+<script src=""></script>
+
+<body style="background-image: linear-gradient(to bottom, #d8f7ff,rgb(255, 255, 255), #d8f7ff );">
+
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </div>
+
+    <div class="Head">
+        <h1>Hi,</h1>
+        <p>Welcome to my my portfolio website</p>
+        <p>Stay here to watch video</p>
+    </div>
+
+    <div class="Cat">
+        <video width="640" height="480" controls autoplay>
+            <source src="cat.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <p>To audio button</p>
+    <div class="bounce">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFKdIQ_is-vkvl8UPbvRolFirNeggIIjJ-9A&s"
+            alt="Play Button" width="150" style="cursor: pointer;" onclick="document.getElementById('sound').play();" />
+
+        <audio id="sound">
+            <source src="hehe.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <button class = "bounce">Click</button>
+</body>
+<script src="zad3.js"></script>
+<h1>Posty od Rzyma</h1>
+<div id="posts"></div>
+</html>
