@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Kamila</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Moje Portfolio</h1>
+        <p>Witaj w mojej galerii projektów!</p>
+    </header>
+
+    <main>
+        <section id="dynamic-content">
+            <h2>Moje projekty</h2>
+            <div id="data-container">Kliknij przycisk, aby zobaczyć moje projekty!</div>
+        </section>
+
+        <section id="media">
+            <h2>🎬 Moje multimedia</h2>
+
+            <div class="media-block">
+                <h3>📹 Film</h3>
+                <video width="360" controls autoplay loop muted>
+                    <source src="video.mp4" type="video/mp4">
+                    Twoja przeglądarka nie obsługuje wideo.
+                </video>
+                <p class="media-text">
+                    🎶 <em>“Listen to the beat of your heart and keep on dancing.”</em><br>
+                    — film o pasji, rytmie i radości z tworzenia.
+                </p>
+            </div>
+
+            <div class="media-block">
+                <h3>🎵 Muzyka</h3>
+                <audio controls autoplay loop>
+                    <source src="music.mp3" type="audio/mpeg">
+                    Twoja przeglądarka nie obsługuje audio.
+                </audio>
+                <p class="media-text">
+                    🌿 <em>“Plant love, grow peace.”</em><br>
+                    — utwór o harmonii, naturze i ciepłym spokoju serca.
+                </p>
+            </div>
+
+            <button id="loadBtn">Załaduj projekty</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Kamila Kostyliova</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
