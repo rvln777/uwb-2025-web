@@ -1,0 +1,82 @@
+.Head {
+    text-align: center;
+    border-bottom-style: solid;
+    border-width: 4px;
+}
+
+.Cat {
+    text-align: center;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-width: 4px;
+}
+
+.topnav {
+    overflow: hidden;
+    border-style: solid;
+    border-width: 4px;
+    background-image: linear-gradient(to right, #d8f7ff, #79ffff, #d8f7ff);
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    background-color: #79ffff;
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-right-style: solid;
+    border-width: 2px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: rgb(148, 255, 243);
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: rgb(148, 255, 243);
+    color: black;
+}
+
+.bounce {
+    animation: bounce 2s ease infinite;
+}
+
+.bounce:hover {
+  animation: bounce1 1s;
+}
+@keyframes bounce1 {
+    0% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(-45%);
+    }
+
+    80% {
+        transform: translateY(0%);
+    }
+
+    90% {
+        transform: translateY(-27%);
+    }
+
+    97% {
+        transform: translateY(0%);
+    }
+
+    99% {
+        transform: translateY(-9%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
