@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio</title>
+  <style>
+    :root {
+      --bg: #0f1220;
+      --card: #171a2b;
+      --muted: #aab1c9;
+      --text: #e8ebff;
+      --accent: #7c5cff;
+      --accent-2: #00d4ff;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text); background: radial-gradient(1200px 800px at 10% -10%, #1c2040 0, transparent 60%),
+               radial-gradient(1000px 600px at 110% 10%, #182044 0, transparent 60%),
+               var(--bg);
+    }
+    header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(15,18,32,.8); backdrop-filter: blur(8px);
+      border-bottom: 1px solid #24263c; box-shadow: var(--shadow);
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+    nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .logo { font-weight: 800; letter-spacing: .5px; }
+    .logo span { color: var(--accent); }
+    .nav-links a { color: var(--muted); text-decoration: none; margin-left: 18px; }
+    .nav-links a:hover { color: var(--text); }
+
+    .hero { display: grid; grid-template-columns: 1.2fr .8fr; gap: 28px; align-items: center; padding: 40px 20px 20px; }
+    .hero h1 { font-size: clamp(28px, 4vw, 46px); line-height: 1.1; margin: 0 0 10px; }
+    .subtitle { color: var(--muted); }
+    .cta {
+      display: inline-flex; align-items: center; gap: 10px; margin-top: 18px; padding: 12px 18px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2)); border: none; color: white; border-radius: 12px;
+      font-weight: 700; cursor: pointer; box-shadow: var(--shadow); transform: translateY(0); transition: transform .2s ease;
+    }
+    .cta:active { transform: translateY(2px); }
+
+    /* Bounce animation for button on hover (CSS task) */
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      30% { transform: translateY(-6px); }
+      60% { transform: translateY(2px); }
+    }
+    .cta:hover { animation: bounce .6s ease-in-out; }
+
+    .card { background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01)); border: 1px solid #272a45; border-radius: var(--radius); box-shadow: var(--shadow); }
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; }
+    .col-8 { grid-column: span 8; }
+    .col-4 { grid-column: span 4; }
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .col-8, .col-4 { grid-column: span 12; }
+    }
+
+    .section-title { margin: 28px 0 14px; font-size: 20px; color: var(--muted); }
+
+    .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+    .portfolio-item { padding: 14px; }
+    .portfolio-item h4 { margin: 10px 0 4px; }
+    .portfolio-item p { margin: 0; color: var(--muted); font-size: .95rem; }
+
+    /* Dynamic content area */
+    #dynamic-content { padding: 16px; display: grid; grid-template-columns: repeat(auto-fill,minmax(240px,1fr)); gap: 14px; }
+    .post { padding: 14px; }
+    .post h5 { margin: 0 0 8px; font-size: 1.05rem; }
+    .post p { margin: 0; color: var(--muted); }
+
+    .media { padding: 16px; display: grid; gap: 12px; }
+    .media video, .media audio { width: 100%; border-radius: 12px; background: #0d1020; }
+
+    footer { margin-top: 40px; padding: 30px 20px; color: var(--muted); border-top: 1px solid #24263c; text-align: center; }
+    .tag { display:inline-block; padding: 2px 8px; font-size: 12px; border-radius: 999px; background: #1f2442; color: var(--accent-2); border: 1px solid #2a2f57; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">My<span>Portfolio</span></div>
+        <div class="nav-links">
+          <a href="#work">Work</a>
+          <a href="#media">Media</a>
+          <a href="#blog">Blog</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero grid">
+      <div class="col-8">
+        <h1>Hi, I'm Alex — Front‑End Developer</h1>
+        <p class="subtitle">I create sleek, accessible UIs and delightful interactions. This template shows a simple portfolio layout with dynamic content and media embeds.</p>
+        <button id="loadBtn" class="cta">⚡ Load blog posts</button>
+      </div>
+      <div class="col-4 card" style="padding:16px;">
+        <div class="tag">Now available for projects</div>
+        <p style="margin-top:10px;color:var(--muted);">Based in Anywhere • Remote-friendly</p>
+      </div>
+    </section>
+
+    <section id="work">
+      <h3 class="section-title">Selected Work</h3>
+      <div class="portfolio-grid">
+        <article class="card portfolio-item">
+          <img src="https://picsum.photos/seed/folio1/600/360" alt="Project 1" style="width:100%;border-radius:12px;" />
+          <h4>Landing Page Revamp</h4>
+          <p>Redesigned a SaaS landing for better conversion.</p>
+        </article>
+        <article class="card portfolio-item">
+          <img src="https://picsum.photos/seed/folio2/600/360" alt="Project 2" style="width:100%;border-radius:12px;" />
+          <h4>Mobile App UI Kit</h4>
+          <p>Built a reusable design system in Figma & code.</p>
+        </article>
+        <article class="card portfolio-item">
+          <img src="https://picsum.photos/seed/folio3/600/360" alt="Project 3" style="width:100%;border-radius:12px;" />
+          <h4>Dashboard</h4>
+          <p>Interactive charts and real-time data views.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="media" class="card media" aria-label="Media embeds">
+      <h3 class="section-title" style="margin-top:0">Media</h3>
+      <!-- Video embed with controls + autoplay (muted for browser policy), loop enabled -->
+      <video controls autoplay muted loop poster="https://picsum.photos/seed/video/800/450">
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <!-- Audio embed with controls + autoplay (may be blocked without user gesture in some browsers) -->
+      <audio controls autoplay>
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+
+    <section id="blog" class="card" style="padding: 16px;">
+      <h3 class="section-title" style="margin-top:0">Blog (Dynamic)</h3>
+      <div id="dynamic-content" aria-live="polite" aria-busy="false"></div>
+    </section>
+
+    <section id="contact" class="card" style="padding:16px;">
+      <h3 class="section-title" style="margin-top:0">Contact</h3>
+      <p class="subtitle">Email: hello@example.com</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="year"></span> Alex Dev</div>
+  </footer>
+
+  <script>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // JavaScript Task: fetch() from JSONPlaceholder and display (Dynamic Content Area)
+    async function loadPosts() {
+      const root = document.getElementById('dynamic-content');
+      root.setAttribute('aria-busy', 'true');
+      root.innerHTML = '<p style="color:var(--muted)">Loading posts…</p>';
+
+      try {
+        const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=6');
+        if (!res.ok) throw new Error('Network response was not ok');
+        const posts = await res.json();
+
+        root.innerHTML = posts.map(p => `
+          <article class="card post">
+            <h5>${p.title.replace(/&/g,'&amp;')}</h5>
+            <p>${p.body.replace(/&/g,'&amp;')}</p>
+          </article>
+        `).join('');
+      } catch (err) {
+        root.innerHTML = `<p style="color:tomato">Failed to load posts: ${err.message}</p>`;
+      } finally {
+        root.setAttribute('aria-busy', 'false');
+      }
+    }
+
+    // Load on button click and also auto-load after a small delay
+    const btn = document.getElementById('loadBtn');
+    btn.addEventListener('click', loadPosts);
+    window.addEventListener('DOMContentLoaded', () => setTimeout(loadPosts, 500));
+  </script>
+</body>
+</html>
