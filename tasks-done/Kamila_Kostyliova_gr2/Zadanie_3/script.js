@@ -1,9 +1,10 @@
+
 const container = document.getElementById('data-container');
 const loadBtn = document.getElementById('loadBtn');
 
 const projects = [
   {
-    title: "Mój pierwszy projekt",
+    title: "Mój projekt",
     body: "Stworzyłam prostą stronę HTML z formularzem, tabelą i stylami CSS."
   },
   {
@@ -26,4 +27,6 @@ function showProjects() {
 }
 
 loadBtn.addEventListener('click', showProjects);
+
+
 container.innerHTML = "<p>Kliknij przycisk, aby zobaczyć moje projekty!</p>";
