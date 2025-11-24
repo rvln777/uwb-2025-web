@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lekcja 1 – Kamila Kostyliova</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moja Strona – Projekt HTML CSS JS</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Witaj na stronie Kamili Kostyliovej!</h1>
-  <h2>Uczę się HTML, CSS i JavaScript 💻</h2>
 
-  <p>To jest mój pierwszy paragraf w HTML. Dzisiaj uczę się jak tworzyć strukturę strony.</p>
-  <div>To jest pierwszy div.</div>
-  <div>To jest drugi div z tekstem.</div>
+    <h1 id="main-title">Witaj na mojej stronie!</h1>
+    <h2 class="subtitle">Strona wykonana na potrzeby nauki HTML</h2>
 
-  <p>Odwiedź stronę: 
-    <a href="https://www.wikipedia.org" target="_blank">Wikipedia</a>
-  </p>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="Logo JS" width="200">
+    <p class="text">
+        To jest przykładowa strona internetowa zbudowana w celu nauki HTML, CSS oraz JavaScript.
+        Zawiera nagłówki, akapity, listy, linki, obrazki oraz podstawowe skrypty JS.
+    </p>
 
-  <h3>Moja lista uporządkowana (ol)</h3>
-  <ol>
-    <li>Uczę się HTML</li>
-    <li>Uczę się CSS</li>
-    <li>Uczę się JavaScript</li>
-  </ol>
+    <div class="box" id="info-box">To jest główne informacyjne okienko.</div>
+    <div class="box secondary-box">Tutaj znajduje się dodatkowy blok z treścią.</div>
 
-  <h3>Moja lista nieuporządkowana (ul)</h3>
-  <ul>
-    <li>Kawa ☕</li>
-    <li>Herbata 🍵</li>
-  </ul>
+    <a href="https://en.wikipedia.org/wiki/Java_(programming_language)" target="_blank">
+        Otwórz stronę o języku Java
+    </a>
 
-  <div id="textDiv">Ten tekst zostanie zmieniony przez JavaScript!</div>
-  <button id="changeBtn">Kliknij mnie!</button>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Fronalpstock_big.jpg" alt="Piękny krajobraz" width="300" />
 
-  <script src="scripts.js"></script>
+    <h3>Lista zadań</h3>
+    <ol>
+        <li>Nauczyć się podstaw HTML</li>
+        <li>Stworzyć własną stronę</li>
+        <li>Dodać styl CSS</li>
+    </ol>
+
+    <h3>Najważniejsze narzędzia</h3>
+    <ul>
+        <li>Laptop</li>
+        <li>Internet</li>
+    </ul>
+
+    <script src="script.js"></script>
 </body>
 </html>

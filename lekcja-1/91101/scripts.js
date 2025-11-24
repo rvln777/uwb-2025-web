@@ -1,21 +1,29 @@
-console.log("Cześć! To moja pierwsza strona z JavaScript!");
-console.log(2025);
-let imie = "Kamila";
-console.log("Witaj, " + imie + "!");
+console.log("Witaj w konsoli tej strony!");
+console.log("Liczba testowa:", 42);
 
-let wiek = 20;
-const student = true;
-let ulubionyKolor = "różowy";
-console.log(wiek, student, ulubionyKolor);
+let tekst = "To jest przykładowa zmienna.";
+console.log(tekst);
 
-function suma(a, b) {
-  return a + b;
+let a = 5;
+let b = 7;
+
+function suma(x, y) {
+    return x + y;
 }
-console.log("Wynik sumy:", suma(5, 8));
 
-document.getElementById("textDiv").textContent = "Tekst został zmieniony przez JavaScript!";
+console.log("Wynik funkcji suma:", suma(a, b));
 
-document.getElementById("changeBtn").addEventListener("click", function() {
-  document.body.style.backgroundColor = "lightblue";
-  console.log("Kolor tła został zmieniony!");
+document.getElementById("main-title").textContent = "Witaj na mojej polskiej stronie!";
+document.querySelector(".subtitle").style.color = "#b82d86";
+
+const boxy = document.querySelectorAll(".box");
+
+boxy.forEach(box => {
+    box.style.transition = "0.3s";
+    box.addEventListener("mouseover", () => {
+        box.style.transform = "scale(1.03)";
+    });
+    box.addEventListener("mouseout", () => {
+        box.style.transform = "scale(1)";
+    });
 });

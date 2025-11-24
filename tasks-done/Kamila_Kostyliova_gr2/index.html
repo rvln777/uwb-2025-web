@@ -1,75 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Second Task - Kamila Kostyliova</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strona Kamila Kostyliova</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
     <header>
-        <h1>My Second Web Task</h1>
-        <nav>
-            <a href="#">Home</a> |
-            <a href="#">About</a> |
-            <a href="#">Contact</a>
-        </nav>
+        <h1>Moja strona</h1>
+        <h2>Strona wykonana na potrzeby nauki HTML</h2>
     </header>
 
     <section>
-        <h2>Form Example</h2>
-        <form>
-            <label>Username:</label>
-            <input type="text" placeholder="Enter username"><br><br>
+        <article>
+            <h3>Formularz Logowania</h3>
+            <form>
+                <label>Nazwa użytkownika:<br>
+                    <input type="text" name="username" required>
+                </label><br><br>
 
-            <label>Email:</label>
-            <input type="email" placeholder="Enter email"><br><br>
+                <label>Email:<br>
+                    <input type="email" name="email" required>
+                </label><br><br>
 
-            <label>Password:</label>
-            <input type="password" placeholder="Enter password"><br><br>
+                <label>Hasło:<br>
+                    <input type="password" name="password" required>
+                </label><br><br>
 
-            <button type="submit">Submit</button>
-        </form>
+                <button type="submit">Wyślij</button>
+            </form>
+        </article>
     </section>
 
     <section>
-        <h2>Product Table</h2>
+        <h3>Tabela Produktów</h3>
         <table border="1">
             <tr>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Description</th>
+                <th>Nazwa</th>
+                <th>Cena</th>
+                <th>Opis</th>
             </tr>
             <tr>
-                <td>Apple</td>
-                <td>$1</td>
-                <td>Fresh red apple</td>
+                <td>Magiczny Kryształ</td>
+                <td>25 zł</td>
+                <td>Pięknie świeci w ciemności</td>
             </tr>
             <tr>
-                <td>Banana</td>
-                <td>$0.5</td>
-                <td>Sweet yellow banana</td>
+                <td>Niebieska Róża</td>
+                <td>15 zł</td>
+                <td>Kwiat o bajkowej barwie</td>
             </tr>
         </table>
     </section>
 
-    <article>
-        <h2>About This Page</h2>
-        <p>This page demonstrates HTML, CSS, and JavaScript tasks.</p>
-    </article>
+    <section>
+        <h3>Przycisk do Zadań JavaScript</h3>
+        <button id="klikBtn">Kliknij mnie</button>
+        <button id="kolorBtn">Zmień kolor okienka</button>
+        <div id="magiczne-okno">To okno zmieni kolor!</div>
+    </section>
 
     <footer>
-        <p>&copy; 2025 Kamila Kostyliova</p>
+        <p>© 2025 Projekt HTML</p>
     </footer>
-
-    <div class="flex-container">
-        <div class="box">Box 1</div>
-        <div class="box">Box 2</div>
-        <div class="box">Box 3</div>
-    </div>
-
-    <button id="clickBtn">Click me</button>
-    <button id="colorBtn">Change Color</button>
 
     <script src="script.js"></script>
 </body>

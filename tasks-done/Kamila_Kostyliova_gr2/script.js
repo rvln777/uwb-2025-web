@@ -1,29 +1,36 @@
-const clickBtn = document.getElementById("clickBtn");
-clickBtn.addEventListener("click", () => {
+
+const klikBtn = document.getElementById("klikBtn");
+
+klikBtn.addEventListener("click", () => {
     console.log("Button Clicked!");
-    alert("Button Clicked!");
+    alert("Przycisk został kliknięty!");
 });
 
-const numbers = [1, 2, 3, 4, 5];
-let sum = 0;
-for (let i = 0; i < numbers.length; i++) {
-    sum += numbers[i];
+const kolorBtn = document.getElementById("kolorBtn");
+const magiczneOkno = document.getElementById("magiczne-okno");
+
+kolorBtn.addEventListener("click", () => {
+    const losowyKolor = "#" + Math.floor(Math.random()*16777215).toString(16);
+    magiczneOkno.style.backgroundColor = losowyKolor;
+});
+
+
+const liczby = [2, 5, 7, 10, 3];
+let suma = 0;
+
+for (let i = 0; i < liczby.length; i++) {
+    suma += liczby[i];
 }
-console.log("Sum:", sum);
 
-const doubled = numbers.map(num => num * 2);
-console.log("Doubled values:", doubled);
+console.log("Suma tablicy:", suma);
 
-let number = 7;
-if (number % 2 === 0) {
-    console.log(number + " is even");
+const podwojone = liczby.map(num => num * 2);
+console.log("Podwojone wartości:", podwojone);
+
+let liczbaDoSprawdzenia = 7;
+
+if (liczbaDoSprawdzenia % 2 === 0) {
+    console.log(liczbaDoSprawdzenia, "– liczba parzysta");
 } else {
-    console.log(number + " is odd");
+    console.log(liczbaDoSprawdzenia, "– liczba nieparzysta");
 }
-
-const colorBtn = document.getElementById("colorBtn");
-colorBtn.addEventListener("click", () => {
-    const colors = ["lightblue", "lightgreen", "lightpink", "lightyellow"];
-    const random = colors[Math.floor(Math.random() * colors.length)];
-    document.body.style.backgroundColor = random;
-});
