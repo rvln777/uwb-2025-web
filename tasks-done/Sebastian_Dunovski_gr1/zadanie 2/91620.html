@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadania HTML/CSS/JS</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Moja Strona – Zadania HTML/CSS/JS</h1>
+</header>
+
+<section>
+
+    <!-- FORMULARZ -->
+    <article>
+        <h2>Formularz logowania</h2>
+        <form>
+            <label>Username: <input type="text" id="username"></label><br><br>
+            <label>Email: <input type="email" id="email"></label><br><br>
+            <label>Password: <input type="password" id="password"></label><br><br>
+
+            <button type="submit">Wyślij</button>
+        </form>
+    </article>
+
+    <!-- TABELA -->
+    <article>
+        <h2>Lista produktów</h2>
+        <table>
+            <tr>
+                <th>Nazwa</th>
+                <th>Cena</th>
+                <th>Opis</th>
+            </tr>
+            <tr>
+                <td>Telefon</td>
+                <td>1200 zł</td>
+                <td>Dobry smartfon</td>
+            </tr>
+            <tr>
+                <td>Laptop</td>
+                <td>3500 zł</td>
+                <td>Wydajny komputer</td>
+            </tr>
+        </table>
+    </article>
+
+    <!-- FLEXBOX -->
+    <article>
+        <h2>Flexbox – trzy elementy</h2>
+        <div class="flex-container">
+            <div class="box">Element 1</div>
+            <div class="box">Element 2</div>
+            <div class="box">Element 3</div>
+        </div>
+    </article>
+
+    <!-- POSITION -->
+    <article>
+        <h2>Position – relative / absolute / fixed</h2>
+
+        <div class="relative-box">
+            Element z position: relative
+            <div class="absolute-box">absolute</div>
+        </div>
+
+        <div class="fixed-box">fixed (przyklejony do ekranu)</div>
+    </article>
+
+    <!-- EVENT BUTTON -->
+    <article>
+        <h2>Event Handling – kliknięcie przycisku</h2>
+        <button id="clickBtn">Kliknij mnie</button>
+    </article>
+
+    <!-- RANDOM COLOR -->
+    <article>
+        <h2>DOM – zmiana koloru tła diva</h2>
+        <div id="colorBox" class="color-box">
+            Kliknij przycisk poniżej
+        </div>
+        <button id="colorBtn">Zmień kolor</button>
+    </article>
+
+</section>
+
+<footer>
+    <p>Stopka strony – przykładowy tekst</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
