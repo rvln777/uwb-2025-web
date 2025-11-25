@@ -1,0 +1,39 @@
+/* Tło strony */
+body {
+    background-color: #f0f0f0; /* jasny szary */
+    font-family: Arial, sans-serif;
+}
+
+/* Nagłówki */
+h1 {
+    color: darkblue;
+    font-size: 40px;
+}
+
+h2, h3, h4, h5, h6 {
+    color: #444;
+}
+
+/* Akapit */
+p {
+    font-size: 18px;
+    padding: 10px;
+}
+
+/* Styl dla divów */
+.box {
+    background-color: white;
+    border: 2px solid black;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+/* Link */
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
