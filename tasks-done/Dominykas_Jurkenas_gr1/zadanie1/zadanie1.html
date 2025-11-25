@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Moja strona Webowa</title>
+    <style>
+        /* Styling Text */
+        body {
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 32px;
+            font-style: italic;
+            margin: 20px 0;
+            padding: 10px;
+        }
+
+        h2 {
+            color: #34495e;
+            font-size: 28px;
+            padding: 8px 0;
+        }
+
+        h3 {
+            color: #7f8c8d;
+            font-size: 24px;
+        }
+
+        h4, h5, h6 {
+            color: #95a5a6;
+        }
+
+        p {
+            color: #2c3e50;
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 15px 0;
+            padding: 5px;
+        }
+
+        /* Background Colors and Borders */
+        .hobby-section {
+            background-color: #e8f5e9;
+            border: 3px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .video-section {
+            background-color: #fff3e0;
+            border: 2px dashed #ff9800;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .headings-example {
+            background-color: #e3f2fd;
+            padding: 15px;
+            margin: 20px 0;
+            border: 1px solid #2196f3;
+        }
+
+        /* CSS Selectors Examples */
+        /* Tag selector */
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        ol {
+            padding-left: 25px;
+        }
+
+        /* Class selector */
+        .example {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        /* ID selector */
+        #example {
+            background-color: #fff9c4;
+            padding: 10px;
+            border-left: 4px solid #fbc02d;
+        }
+
+        /* Link styling */
+        a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #e74c3c;
+            text-decoration: underline;
+        }
+
+        img {
+            border: 3px solid #9b59b6;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Button styling */
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main-heading">To jest moja strona webowa jestem Dominykas Jurkenas</h1>
+
+    <div class="headings-example">
+        <ul>
+            <li><h1>To przykład nagłówku h1</h1></li>
+            <li><h2>To przykład nagłówku h2</h2></li>
+            <li><h3>To przykład nagłówku h3</h3></li>
+            <li><h4>To przykład nagłówku h4</h4></li>
+            <li><h5>To przykład nagłówku h5</h5></li>
+            <li><h6>To przykład nagłówku h6</h6></li>
+        </ul>
+    </div>
+
+    <div class="hobby-section">
+        <h2>Moje hobby</h2>
+        <ol>
+            <li><p>Składać kostkę rubika</p></li>
+            <li><p>Programować</p></li>
+            <li><p>Robienie zdjęć (Fotografia)</p></li>
+        </ol>
+    </div>
+
+    <div class="video-section">
+        <h2>Moje najuliubione wideo</h2>
+        <p class="example">Naciśnij na obrazek aby obejrzeć wideo!</p>
+        <p><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank">
+            <img src="https://picsum.photos/400/300" alt="Losowy obrazek"></a></p>
+    </div>
+
+    <div id="example">
+        <h2>Sekcja JavaScript</h2>
+        <p id="demo-text">Ten tekst zostanie zmieniony przez JavaScript!</p>
+        <button onclick="changeText()">Zmień tekst</button>
+        <button onclick="calculateSum()">Oblicz sumę (5 + 10)</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        // Basic Console Outputs
+        console.log("Witaj na mojej stronie!");
+        console.log(2025);
+        let userName = "Dominykas";
+        console.log("Użytkownik: " + userName);
+
+        // Variables and Data Types
+        let myName = "Dominykas Jurkenas";
+        let age = 20;
+        let isStudent = true;
+        const PI = 3.14159;
+
+        console.log("String:", myName);
+        console.log("Number:", age);
+        console.log("Boolean:", isStudent);
+        console.log("Constant:", PI);
+
+        // Basic Functions
+        function addNumbers(num1, num2) {
+            return num1 + num2;
+        }
+
+        let sum = addNumbers(15, 25);
+        console.log("Suma 15 + 25 = " + sum);
+
+        // DOM Manipulation Functions
+        function changeText() {
+            document.getElementById("demo-text").textContent = "Tekst został zmieniony przez JavaScript! 🎉";
+        }
+
+        function calculateSum() {
+            let result = addNumbers(5, 10);
+            document.getElementById("result").textContent = "Wynik: 5 + 10 = " + result;
+            document.getElementById("result").style.color = "#27ae60";
+            document.getElementById("result").style.fontSize = "20px";
+            document.getElementById("result").style.fontWeight = "bold";
+        }
+
+        // Use querySelector to style element
+        document.addEventListener("DOMContentLoaded", function() {
+            let mainHeading = document.querySelector("#main-heading");
+            mainHeading.style.textShadow = "2px 2px 4px rgba(0,0,0,0.3)";
+            
+            console.log("Strona została załadowana!");
+            console.log("Wszystkie elementy DOM są gotowe.");
+        });
+    </script>
+</body>
+</html>
