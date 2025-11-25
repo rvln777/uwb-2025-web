@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Zadanie 2 — HTML/CSS/JS</title>
+    <style>
+        /* Flexbox */
+        .flex-container {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            margin: 12px 0;
+            padding: 12px;
+            background: #f5f7fb;
+            border: 1px solid #e0e6ef;
+        }
+        .flex-item {
+            background: #cfe3ff;
+            padding: 16px;
+            border-radius: 6px;
+            min-width: 100px;
+            text-align: center;
+        }
+
+        /* Positioning demo */
+        .position-demo {
+            position: relative;
+            height: 140px;
+            border: 1px dashed #999;
+            margin: 18px 0;
+            padding: 8px;
+            background: #fffbea;
+        }
+        .position-demo .absolute-box {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: #ffd7d7;
+            padding: 8px;
+            border-radius: 4px;
+        }
+        .fixed-box {
+            position: fixed;
+            bottom: 12px;
+            right: 12px;
+            background: #d7ffd7;
+            padding: 8px;
+            border-radius: 4px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
+
+        /* Link hover + transition */
+        a.hover-link {
+            color: #1a73e8;
+            text-decoration: none;
+            transition: color 0.25s ease, transform 0.25s ease;
+        }
+        a.hover-link:hover {
+            color: #e91e63;
+            transform: translateY(-2px);
+        }
+
+        /* Simple table styling */
+        table.products {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0;
+        }
+        table.products th, table.products td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        table.products th {
+            background: #eef6ff;
+            text-align: left;
+        }
+
+        /* small utilities */
+        .btn { padding: 8px 12px; border-radius: 4px; cursor: pointer; border: 1px solid #888; background: #fff; }
+        .btn-primary { background: #1a73e8; color: #fff; border-color: #1666cc; }
+        #colorBox { width: 100%; height: 80px; border-radius: 6px; border: 1px solid #ccc; margin-top: 8px; display:flex; align-items:center; justify-content:center; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Zadanie 2 — HTML, CSS, JS</h1>
+        <nav>
+            <a class="hover-link" href="#form">Formularz</a> |
+            <a class="hover-link" href="#products">Produkty</a> |
+            <a class="hover-link" href="#js">JS Demo</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="form" aria-labelledby="form-title">
+            <h2 id="form-title">Formularz (Username, Email, Password)</h2>
+            <form id="demoForm">
+                <div>
+                    <label for="username">Username</label><br />
+                    <input id="username" name="username" type="text" required />
+                </div>
+                <div>
+                    <label for="email">Email</label><br />
+                    <input id="email" name="email" type="email" required />
+                </div>
+                <div>
+                    <label for="password">Password</label><br />
+                    <input id="password" name="password" type="password" required />
+                </div>
+                <div style="margin-top:8px;">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </section>
+
+        <article id="products" aria-labelledby="products-title">
+            <h2 id="products-title">Tabela produktów</h2>
+            <table class="products">
+                <thead>
+                    <tr>
+                        <th>Nazwa</th>
+                        <th>Cena</th>
+                        <th>Opis</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Kubek</td>
+                        <td>25 PLN</td>
+                        <td>Porcelanowy kubek 300 ml</td>
+                    </tr>
+                    <tr>
+                        <td>Notes</td>
+                        <td>15 PLN</td>
+                        <td>Notes A5, 80 stron</td>
+                    </tr>
+                    <tr>
+                        <td>Długopis</td>
+                        <td>5 PLN</td>
+                        <td>Nieścieralny, czarny</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+
+        <section aria-labelledby="semantic-example">
+            <h2 id="semantic-example">Przykład semantyczny</h2>
+            <article>
+                <header>
+                    <h3>Artykuł: O nas</h3>
+                </header>
+                <p>Krótki tekst opisujący zespół i cel strony.</p>
+                <footer>Autor: Zespół</footer>
+            </article>
+        </section>
+
+        <section>
+            <h2>Flexbox — trzy elementy</h2>
+            <div class="flex-container" id="flexDemo">
+                <div class="flex-item">Element 1</div>
+                <div class="flex-item">Element 2</div>
+                <div class="flex-item">Element 3</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Positioning demo</h2>
+            <div class="position-demo">
+                Kontener z position: relative
+                <div class="absolute-box">Pozycja: absolute</div>
+            </div>
+            <div class="fixed-box">Pozycja: fixed (widoczna zawsze)</div>
+        </section>
+
+        <section id="js" aria-labelledby="js-title">
+            <h2 id="js-title">JavaScript demo</h2>
+
+            <div>
+                <button id="clickBtn" class="btn">Kliknij mnie (console + alert)</button>
+            </div>
+
+            <div style="margin-top:12px;">
+                <h3>Tablice i pętle</h3>
+                <p>W konsoli zobaczysz sumę i zmapowaną tablicę.</p>
+                <pre id="arrayOutput" style="background:#f6f6f6;padding:8px;border-radius:4px;"></pre>
+            </div>
+
+            <div style="margin-top:12px;">
+                <h3>Sprawdź parzystość</h3>
+                <input id="numberInput" type="number" value="4" />
+                <button id="checkBtn" class="btn">Sprawdź (even/odd)</button>
+            </div>
+
+            <div style="margin-top:12px;">
+                <h3>Zmiana koloru tła</h3>
+                <div id="colorBox">Box</div>
+                <button id="colorBtn" class="btn" style="margin-top:8px;">Zmień losowy kolor</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Stopka strony — link: <a class="hover-link" href="https://example.com" target="_blank" rel="noopener">example.com</a></p>
+    </footer>
+
+    <script>
+        // Formularz: zapobiegaj domyślnemu submit i pokaż wartości w konsoli
+        const demoForm = document.getElementById('demoForm');
+        demoForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const data = {
+                username: demoForm.username.value,
+                email: demoForm.email.value,
+                password: demoForm.password.value ? '***' : ''
+            };
+            console.log('Form submitted:', data);
+            alert('Formularz wysłany (sprawdź konsolę)');
+        });
+
+        // Button: log + alert
+        document.getElementById('clickBtn').addEventListener('click', function() {
+            console.log('Button Clicked!');
+            alert('Button Clicked!');
+        });
+
+        // Arrays + loops
+        const numbers = [1, 2, 3, 4, 5];
+        // for loop to calculate sum
+        let sum = 0;
+        for (let i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
+        // map to double values
+        const doubled = numbers.map(n => n * 2);
+        const arrayOutput = document.getElementById('arrayOutput');
+        arrayOutput.textContent = 'numbers: ' + JSON.stringify(numbers) + '\nsum (for loop): ' + sum + '\ndoubled (map): ' + JSON.stringify(doubled);
+        console.log('numbers:', numbers);
+        console.log('sum (for loop):', sum);
+        console.log('doubled (map):', doubled);
+
+        // Conditional: check even or odd
+        document.getElementById('checkBtn').addEventListener('click', function() {
+            const val = Number(document.getElementById('numberInput').value);
+            if (!Number.isFinite(val)) {
+                console.log('Podana wartość nie jest liczbą');
+                return;
+            }
+            if (val % 2 === 0) {
+                console.log(val + ' jest parzysta (even).');
+                alert(val + ' jest parzysta (even).');
+            } else {
+                console.log(val + ' jest nieparzysta (odd).');
+                alert(val + ' jest nieparzysta (odd).');
+            }
+        });
+
+        // DOM Manipulation: change background color of a div to a random color
+        function randomColor() {
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+            return `rgb(${r}, ${g}, ${b})`;
+        }
+        document.getElementById('colorBtn').addEventListener('click', function() {
+            const box = document.getElementById('colorBox');
+            const color = randomColor();
+            box.style.backgroundColor = color;
+            console.log('Background color changed to', color);
+        });
+
+        // Ensure fixed box is visible on load (demo)
+        console.log('Zadanie JS załadowane — sprawdź konsolę.');
+    </script>
+</body>
+</html>
