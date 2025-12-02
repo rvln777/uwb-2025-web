@@ -1,0 +1,92 @@
+UWB shop
+
+FUNCTIONALITY:
+- Display Products:
+    - Sort by Price Product
+    - Search Product
+    - Pagination Product
+- Buy Products flow:
+    - Add Product to Cart
+    - Remove Product from Cart
+    - Create Order
+    - Reduce Product Qty
+- Display Orders:
+    - Sort Date Order
+    - Pagination Order
+
+BE.DB:
+- Products
+    - Id
+    - Name
+    - Description
+    - Image
+    - Qty
+    - Price
+- Orders
+    - Id
+    - Products 
+        - Id
+        - Qty
+    - Date
+
+BE.API: 
+- GET: /products?
+    - price_sort=asc/desc&
+    - name=string&
+    - page=int
+- GET: /orders?
+    - date_sort=asc/desc&
+    - page=int
+- POST: /orders
+    - body:
+        - products[]
+            - qty
+            - id
+
+FE.Elements:
+- Top Navigation Menu
+    - Products Page
+    - Orders Page
+    - Cart
+- Products Page
+    - Sort, search top bar
+    - Products grid
+        - Name
+        - Image
+        - Qty
+        - Price
+        - Add to cart button
+    - Pagination bottom bar
+- Product Details Page
+    - Name
+    - Image
+    - Qty
+    - Price
+    - Description
+    - Add to cart button
+- Order List Page
+    - Sort, search top bar
+    - Order List
+        - Id
+        - Sum Price
+        - Date
+        - Open Details Button
+    - Pagination bottom bar
+- Order Details Page
+    - Id
+    - Sum Price
+    - Date
+    - Products Bought
+        - Name
+        - Image
+        - Qty
+        - Summary Price
+- Cart Page
+    - Products Processing
+        - Name
+        - Image
+        - Qty
+        - Summary Price
+        - Remove Product
+    - Confirm Order Button
+- Footer
