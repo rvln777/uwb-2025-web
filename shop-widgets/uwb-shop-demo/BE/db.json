@@ -1,0 +1,106 @@
+{
+  "products": [
+    {
+      "Id": 1,
+      "Name": "Eco Water Bottle",
+      "Description": "Reusable stainless steel water bottle, 500ml.",
+      "Image": "file:///Users/Roman_Avlasevic/Desktop/uwb-shop-demo/FE/images/image-1.jpg",
+      "Qty": 120,
+      "Price": 15.99
+    },
+    {
+      "Id": 2,
+      "Name": "Wireless Mouse",
+      "Description": "Ergonomic wireless mouse with USB receiver.",
+      "Image": "<svg width='50' height='50'><rect width='40' height='30' x='5' y='10' fill='#2196F3'/></svg>",
+      "Qty": 75,
+      "Price": 22.5
+    },
+    {
+      "Id": 3,
+      "Name": "Bluetooth Speaker",
+      "Description": "Portable Bluetooth speaker with 10h battery life.",
+      "Image": "<svg width='50' height='50'><ellipse cx='25' cy='25' rx='20' ry='10' fill='#FFC107'/></svg>",
+      "Qty": 60,
+      "Price": 35
+    },
+    {
+      "Id": 4,
+      "Name": "Notebook",
+      "Description": "A5 lined notebook, 200 pages.",
+      "Image": "<svg width='50' height='50'><rect width='30' height='40' x='10' y='5' fill='#9C27B0'/></svg>",
+      "Qty": 200,
+      "Price": 6.75
+    },
+    {
+      "Id": 5,
+      "Name": "Desk Lamp",
+      "Description": "LED desk lamp with adjustable brightness.",
+      "Image": "<svg width='50' height='50'><polygon points='25,5 45,45 5,45' fill='#FF5722'/></svg>",
+      "Qty": 40,
+      "Price": 28.99
+    },
+    {
+      "Id": 6,
+      "Name": "USB Flash Drive",
+      "Description": "32GB USB 3.0 flash drive.",
+      "Image": "<svg width='50' height='50'><rect width='20' height='40' x='15' y='5' fill='#607D8B'/></svg>",
+      "Qty": 150,
+      "Price": 12
+    },
+    {
+      "Id": 7,
+      "Name": "Coffee Mug",
+      "Description": "Ceramic mug, 350ml, dishwasher safe.",
+      "Image": "<svg width='50' height='50'><circle cx='25' cy='30' r='15' fill='#795548'/></svg>",
+      "Qty": 90,
+      "Price": 8.5
+    },
+    {
+      "Id": 8,
+      "Name": "Fitness Tracker",
+      "Description": "Waterproof fitness tracker with heart rate monitor.",
+      "Image": "<svg width='50' height='50'><rect width='35' height='15' x='7.5' y='17.5' fill='#00BCD4'/></svg>",
+      "Qty": 55,
+      "Price": 49.99
+    },
+    {
+      "Id": 9,
+      "Name": "Wireless Charger",
+      "Description": "Fast wireless charging pad for smartphones.",
+      "Image": "<svg width='50' height='50'><circle cx='25' cy='25' r='22' fill='#E91E63'/></svg>",
+      "Qty": 58,
+      "Price": 19.99
+    },
+    {
+      "Id": 10,
+      "Name": "Travel Backpack",
+      "Description": "Lightweight backpack with multiple compartments.",
+      "Image": "<svg width='50' height='50'><rect width='30' height='40' x='10' y='5' fill='#8BC34A'/></svg>",
+      "Qty": 25,
+      "Price": 59
+    }
+  ],
+  "orders": [
+    {
+      "id": "a7897d04-2010-4c97-ad7d-ecf03bb994e9",
+      "date": "2025-12-02T17:19:55.040Z",
+      "products": [
+        {
+          "id": 9,
+          "qty": "7"
+        }
+      ]
+    },
+    {
+      "id": "148bf781-08c4-41c9-b281-47d1caadc399",
+      "date": "2025-12-02T17:20:09.127Z",
+      "products": [
+        {
+          "id": 10,
+          "qty": "10"
+        }
+      ]
+    }
+  ]
+}
