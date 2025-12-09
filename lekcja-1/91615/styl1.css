@@ -1,0 +1,166 @@
+body {
+    background-color: #c7bde0;
+}
+
+h1 {
+    color: #dd148c;
+    font-size: 36px;
+}
+
+h2 {
+    color: #21eb3f;
+    font-size: 28px;
+}
+
+h3 {
+    color: #ccff00;
+    font-size: 22px;
+}
+
+p {
+    color: #333;
+    line-height: 1.6;
+}
+
+div {
+    background-color: #e3f2fd;
+    border: 3px solid #2196F3;
+    border-radius: 15px;
+    padding: 20px 15px;
+}
+
+li {
+    color: limegreen;
+}
+
+a {
+    color: yellowgreen;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+img {
+    border: 4px solid black;
+    border-radius: 12px;
+}
+
+.example {
+    color: #ff6600;
+    background-color: #f3c630;
+    padding: 10px;
+}
+
+#special {
+    color: black;
+    background-color: #1defec;
+    padding: 15px;
+}
+
+/* Portfolio Section Styles */
+#portfolio {
+    padding: 40px 20px;
+    background-color: #f5f5f5;
+    margin: 20px 0;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.portfolio-item {
+    background-color: #fff;
+    border: 2px solid #2196F3;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Dynamic Content Area Styles */
+#dynamic-content {
+    padding: 40px 20px;
+    background-color: #e8f5e9;
+    margin: 20px 0;
+}
+
+#api-data {
+    background-color: white;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.user-card {
+    background-color: #f9f9f9;
+    border-left: 4px solid #2196F3;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+/* Media Section Styles */
+#media-section {
+    padding: 40px 20px;
+    background-color: #fff3e0;
+    margin: 20px 0;
+}
+
+.video-container, .audio-container {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+video, audio {
+    width: 100%;
+    max-width: 640px;
+    border-radius: 8px;
+}
+
+/* Button Styles with Bounce Animation */
+button {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    animation: bounce 0.6s ease;
+    background-color: #1976D2;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    75% {
+        transform: translateY(-7px);
+    }
+}

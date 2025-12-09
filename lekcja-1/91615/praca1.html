@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+    <link rel="stylesheet" href="styl1.css">
+</head>
+<body>
+    
+<h1>Main Heading - level 1</h1>
+<h2>Main Heading - level 2</h2>
+<h3>Main Heading - level 3</h3>
+<h4>Main Heading - level 4</h4>
+<h5>Main Heading - level 5</h5>
+<h6>Main Heading - level 6</h6>
+
+<p>Podstawowy sposób na wyświetlenie tekstu na stronie internetowej przez komenda </p>
+
+<p class="example">This paragraph uses a class selector</p>
+
+<div> zawiera tekst div lepszy niz p bo mozna w nim umieszczac inne elementy HTML </div>
+
+<div id="special">This div uses an ID selector</div>
+
+
+<h2>Links</h2>
+    <p>Click here to visit: <a href="https://www.google.com">Google</a></p>
+    <p>Learn more at <a href="https://www.wikipedia.org">Wikipedia</a></p>
+    <a href="https://www.github.com">Visit GitHub</a>
+    <p>Whach tutorials on Youtube <a href="https://www.youtube.com">Youtube</a></p>
+    
+<h2>Images</h2>
+    <img src="https://picsum.photos/400/300" alt="Random placeholder image">
+    <p>An example image from the internet</p>
+
+<h2>Lists</h2>
+
+<h3>Ordered List</h3>
+<ol>
+    <li>First item</li>
+    <li>Second item</li>
+    <li>Third item</li>
+</ol>
+
+<h3>Unordered List</h3>
+<ul>
+    <li>Item one</li>
+    <li>Item two</li>
+</ul>
+
+<header>
+    <h2>Forms</h2>
+</header>
+
+<section>
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<article>
+    <h2>Products Table</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>Laptop</td>
+            <td>$999</td>
+            <td>High performance laptop</td>
+        </tr>
+        <tr>
+            <td>Mouse</td>
+            <td>$25</td>
+            <td>Wireless mouse</td>
+        </tr>
+        <tr>
+            <td>Keyboard</td>
+            <td>$75</td>
+            <td>Mechanical keyboard</td>
+        </tr>
+    </table>
+</article>
+
+<footer>
+    <p>Website Footer 2025</p>
+</footer>
+
+<!-- Portfolio Section -->
+<section id="portfolio">
+    <h2>My Portfolio</h2>
+    <div class="portfolio-grid">
+        <div class="portfolio-item">
+            <h3>Project 1</h3>
+            <p>Web Development Project</p>
+        </div>
+        <div class="portfolio-item">
+            <h3>Project 2</h3>
+            <p>Design Project</p>
+        </div>
+        <div class="portfolio-item">
+            <h3>Project 3</h3>
+            <p>JavaScript Application</p>
+        </div>
+    </div>
+</section>
+
+<!-- Dynamic Content Area -->
+<section id="dynamic-content">
+    <h2>Dynamic Content from API</h2>
+    <div id="api-data">
+        <p>Loading data...</p>
+    </div>
+</section>
+
+<!-- Media Section -->
+<section id="media-section">
+    <h2>Media Gallery</h2>
+
+    <div class="video-container">
+        <h3>Video Player</h3>
+        <video width="640" height="360" controls autoplay muted>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="audio-container">
+        <h3>Audio Player</h3>
+        <audio controls autoplay>
+            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+</section>
+
+<script src="scripty1.js"></script>
+</body>
+</html>
