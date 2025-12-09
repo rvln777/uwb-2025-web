@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1>Moje Portfolio</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projekty</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <h2>Witaj w moim portfolio</h2>
+      <button id="bounceBtn" class="bounce-btn">Animowany przycisk</button>
+    </section>
+
+    <section id="projects">
+      <h2>Projekty</h2>
+      <div id="dynamicContent">
+        <p>Ładowanie danych z API...</p>
+      </div>
+    </section>
+
+    <section class="media-section">
+      <div class="video-container">
+        <h3>Wideo</h3>
+        <video id="portfolioVideo" controls autoplay loop muted>
+          <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+          Twoja przeglądarka nie obsługuje tagu video.
+        </video>
+      </div>
+
+      <div class="audio-container">
+        <h3>Muzyka</h3>
+        <audio id="portfolioAudio" controls autoplay loop>
+          <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
+          Twoja przeglądarka nie obsługuje tagu audio.
+        </audio>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Portfolio</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

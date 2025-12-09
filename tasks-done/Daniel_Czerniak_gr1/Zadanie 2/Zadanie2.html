@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadania Web</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Moja Strona Ćwiczeniowa</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Formularz</h2>
+      <form id="userForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <button type="submit">Wyślij</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Produkty</h2>
+      <article>
+        <table>
+          <thead>
+            <tr>
+              <th>Nazwa</th>
+              <th>Cena</th>
+              <th>Opis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Laptop</td>
+              <td>999zł</td>
+              <td>Gamingowy laptop</td>
+            </tr>
+            <tr>
+              <td>Mysz</td>
+              <td>25zł</td>
+              <td>Bezprzewodowa</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </section>
+
+    <section class="flex-container">
+      <div class="flex-item relative">Element 1</div>
+      <div class="flex-item">Element 2</div>
+      <div class="flex-item absolute">Element 3</div>
+    </section>
+
+    <a href="#" class="hover-link">Najedź myszką</a>
+
+    <button id="jsButton">Kliknij JS!</button>
+    <div id="colorBox" class="color-box"></div>
+  </main>
+
+  <footer>
+    <p>Stopka strony © 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
