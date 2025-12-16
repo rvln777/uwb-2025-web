@@ -1,9 +1,10 @@
-// 1. Add Navbar 
+# Add Navbar 
 https://medium.com/@swati.sharma_216/creating-navbar-using-react-router-63c4e785c2d4
 
-// 2. Create AppContext to keep selected product and method to refresh cart counter
+# Create AppContext to keep selected product and method to refresh cart counter
 https://medium.com/@pratyushpavanchoudhary/understanding-react-context-a-comprehensive-guide-8594fb5fdc2f
-// App.js
+
+- App.js
 export const AppContext = React.createContext(null);
 
 const [product, setProduct] = useState({});
@@ -16,12 +17,12 @@ const [refresh, refreshNavbar] = useState(0);
  .. components   
 </AppContext.Provider>
 
-// Component (usage)
+- Component (usage)
 const { refresh, refreshNavbar } = useContext(AppContext);
 
 refreshNavbar(refresh +1)
 
-// Navbar.js (get data from local storage every time selected items change)
+- Navbar.js (get data from local storage every time selected items change)
 const { refresh } = useContext(AppContext);
 const [counter, setCounter] = useState(0);
 
@@ -31,7 +32,7 @@ useEffect(() => {
     setCounter(cartProductsParsed.length)
 }, [refresh])
 
-// Product.js (set product in context and navigate to Product Details Page)
+- Product.js (set product in context and navigate to Product Details Page)
 const { setProduct } = useContext(AppContext);
 const navigate = useNavigate();
 
@@ -39,5 +40,6 @@ const openProduct = () => {
     setProduct(product);
     navigate('/product');
 }
-// Product Details.js
+
+- Product Details.js
 const { product } = useContext(AppContext);
