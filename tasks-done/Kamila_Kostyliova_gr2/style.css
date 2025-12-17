@@ -1,0 +1,136 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", "Comic Sans MS", sans-serif;
+    background: linear-gradient(180deg, #cfe9ff, #b0d8ff, #d8edff);
+    color: #003d66;
+}
+
+header h1 {
+    text-align: center;
+    color: #006bb3;
+    font-size: 42px;
+    margin-top: 25px;
+    text-shadow: 0 0 12px #89ccff, 0 0 20px #5ab8ff;
+}
+
+header h2 {
+    text-align: center;
+    color: #004d80;
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 8px #aee1ff;
+}
+
+section {
+    max-width: 900px;
+    margin: 25px auto;
+    padding: 20px;
+    background: #e6f4ff;
+    border-radius: 18px;
+    box-shadow: 0 0 20px #a3d4ff;
+}
+
+h3 {
+    color: #005999;
+    text-align: center;
+    text-shadow: 0 0 8px #b9e4ff;
+}
+
+
+form input {
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 12px;
+    border: 2px solid #75c8ff;
+    background: #f4fbff;
+}
+
+form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #0088cc;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #75c8ff;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #00aaff;
+    box-shadow: 0 0 15px #99dbff;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #f0f8ff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+th {
+    background: #99d6ff;
+    padding: 12px;
+    color: #003d66;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+
+.flex-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.flex-item {
+    flex: 1;
+    padding: 15px;
+    background: #d7eeff;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #a2d7ff;
+    text-align: center;
+}
+
+
+#klikBtn, #kolorBtn {
+    background: #0099dd;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 10px;
+    box-shadow: 0 0 12px #80d4ff;
+    transition: 0.3s;
+}
+
+#klikBtn:hover, #kolorBtn:hover {
+    background: #00b0ff;
+    box-shadow: 0 0 18px #aee8ff;
+}
+
+#magiczne-okno {
+    width: 200px;
+    margin: 20px auto;
+    padding: 15px;
+    background: #bfe7ff;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px #94d8ff;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #003d66;
+}

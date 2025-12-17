@@ -1,0 +1,101 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(180deg, #ffe6f9, #ffd3f7, #ffeefc);
+    font-family: "Poppins", "Comic Sans MS", cursive, sans-serif;
+    color: #444;
+}
+
+h1 {
+    color: #ff2fb8;
+    font-size: 48px;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 700;
+    text-shadow:
+        0 0 10px #ff8adf,
+        0 0 20px #ff8adf,
+        0 0 35px #ff2fb8,
+        0 0 50px #ff2fb8;
+}
+
+.subtitle {
+    text-align: center;
+    color: #cc3e99;
+    font-style: italic;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 6px #ffd2f2;
+}
+
+.text {
+    max-width: 700px;
+    margin: 0 auto 25px auto;
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+.box {
+    max-width: 600px;
+    margin: 15px auto;
+    background-color: #ffe0ff;
+    border: 2px solid #cc5ac8;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 0 12px #ffc9ef;
+}
+
+.secondary-box {
+    background-color: #fcdcff;
+}
+
+#info-box {
+    font-weight: bold;
+    color: #b01a84;
+}
+
+a {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 10px 18px;
+    border-radius: 15px;
+    background-color: #d12fa5;
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0 0 10px #ffb6e6;
+    transition: 0.2s;
+}
+
+a:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 18px #ffc6f3;
+}
+
+h3 {
+    text-align: center;
+    color: #c02a8e;
+    margin-top: 30px;
+}
+
+ol, ul {
+    max-width: 400px;
+    margin: 10px auto 25px auto;
+    padding: 12px 20px;
+    background-color: #fff0fb;
+    border-radius: 20px;
+    box-shadow: 0 0 12px #ffd1f5;
+}
+
+li {
+    margin: 6px 0;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: 0 0 15px #ffceef;
+}

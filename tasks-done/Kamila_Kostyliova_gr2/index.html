@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strona Kamila Kostyliova</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <header>
+        <h1>Moja strona</h1>
+        <h2>Strona wykonana na potrzeby nauki HTML</h2>
+    </header>
+
+    <section>
+        <article>
+            <h3>Formularz Logowania</h3>
+            <form>
+                <label>Nazwa użytkownika:<br>
+                    <input type="text" name="username" required>
+                </label><br><br>
+
+                <label>Email:<br>
+                    <input type="email" name="email" required>
+                </label><br><br>
+
+                <label>Hasło:<br>
+                    <input type="password" name="password" required>
+                </label><br><br>
+
+                <button type="submit">Wyślij</button>
+            </form>
+        </article>
+    </section>
+
+    <section>
+        <h3>Tabela Produktów</h3>
+        <table border="1">
+            <tr>
+                <th>Nazwa</th>
+                <th>Cena</th>
+                <th>Opis</th>
+            </tr>
+            <tr>
+                <td>Magiczny Kryształ</td>
+                <td>25 zł</td>
+                <td>Pięknie świeci w ciemności</td>
+            </tr>
+            <tr>
+                <td>Niebieska Róża</td>
+                <td>15 zł</td>
+                <td>Kwiat o bajkowej barwie</td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h3>Przycisk do Zadań JavaScript</h3>
+        <button id="klikBtn">Kliknij mnie</button>
+        <button id="kolorBtn">Zmień kolor okienka</button>
+        <div id="magiczne-okno">To okno zmieni kolor!</div>
+    </section>
+
+    <footer>
+        <p>© 2025 Projekt HTML</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
