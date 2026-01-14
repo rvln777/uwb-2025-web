@@ -32,11 +32,9 @@ BE.DB:
 BE.API: 
 - GET: /products?
     - price_sort=asc/desc&
-    - name=string&
-    - page=int
+    - name=string
 - GET: /orders?
-    - date_sort=asc/desc&
-    - page=int
+    - date_sort=asc/desc
 - POST: /orders
     - body:
         - products[]
@@ -56,7 +54,6 @@ FE.Elements:
         - Qty
         - Price
         - Add to cart button
-    - Pagination bottom bar
 - Product Details Page
     - Name
     - Image
@@ -71,7 +68,6 @@ FE.Elements:
         - Sum Price
         - Date
         - Open Details Button
-    - Pagination bottom bar
 - Order Details Page
     - Id
     - Sum Price
