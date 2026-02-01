@@ -1,0 +1,77 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\VladekBogdanWind\\uwb-2025-web\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\VladekBogdanWind\\uwb-2025-web\\lekcja-1\\91610\\91610.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:lekcja-1\\91610\\91610.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\VladekBogdanWind\\uwb-2025-web\\zadania\\web-dev-into-1.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:zadania\\web-dev-into-1.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\VladekBogdanWind\\uwb-2025-web\\lekcja-1\\91629\\91629.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:lekcja-1\\91629\\91629.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 284,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "91610.html",
+              "DocumentMoniker": "C:\\Users\\VladekBogdanWind\\uwb-2025-web\\lekcja-1\\91610\\91610.html",
+              "RelativeDocumentMoniker": "lekcja-1\\91610\\91610.html",
+              "ToolTip": "C:\\Users\\VladekBogdanWind\\uwb-2025-web\\lekcja-1\\91610\\91610.html",
+              "RelativeToolTip": "lekcja-1\\91610\\91610.html",
+              "ViewState": "AgIAABAAAAAAAAAAAAAUwBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-10-28T16:19:51.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "91629.html",
+              "DocumentMoniker": "C:\\Users\\VladekBogdanWind\\uwb-2025-web\\lekcja-1\\91629\\91629.html",
+              "RelativeDocumentMoniker": "lekcja-1\\91629\\91629.html",
+              "ToolTip": "C:\\Users\\VladekBogdanWind\\uwb-2025-web\\lekcja-1\\91629\\91629.html",
+              "RelativeToolTip": "lekcja-1\\91629\\91629.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-10-28T16:40:32.505Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 116,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "web-dev-into-1.md",
+              "DocumentMoniker": "C:\\Users\\VladekBogdanWind\\uwb-2025-web\\zadania\\web-dev-into-1.md",
+              "RelativeDocumentMoniker": "zadania\\web-dev-into-1.md",
+              "ToolTip": "C:\\Users\\VladekBogdanWind\\uwb-2025-web\\zadania\\web-dev-into-1.md",
+              "RelativeToolTip": "zadania\\web-dev-into-1.md",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAwAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-10-28T16:14:56.423Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
