@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <h1>Oskar's Portfolio</h1>
+      <p class="tagline">Frontend practice: HTML • CSS • JavaScript</p>
+    </div>
+
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#media">Media</a>
+      <a href="#api">API Data</a>
+    </nav>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <section class="card">
+        <h2 id="about">About</h2>
+        <p>
+          Simple portfolio layout with dynamic content loaded via JavaScript.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Actions</h2>
+        <button id="loadBtn" class="btn">Load API Posts</button>
+        <p class="hint">Hover the button 👆 (bounce animation)</p>
+      </section>
+
+      <section class="card">
+        <h2>Contact</h2>
+        <ul class="list">
+          <li>Email: example@example.com</li>
+          <li>GitHub: github.com/yourname</li>
+        </ul>
+      </section>
+    </aside>
+
+    <section class="content">
+      <section class="card" id="projects">
+        <h2>Projects</h2>
+        <div class="grid">
+          <article class="project">
+            <h3>Project One</h3>
+            <p>Portfolio layout + semantic sections.</p>
+          </article>
+          <article class="project">
+            <h3>Project Two</h3>
+            <p>API fetch + dynamic rendering.</p>
+          </article>
+          <article class="project">
+            <h3>Project Three</h3>
+            <p>Animations + media embed.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="card" id="media">
+        <h2>Media</h2>
+
+        <div class="media-wrap">
+          <div class="media-block">
+            <h3>Video</h3>
+            <!-- Autoplay is more reliable when muted. -->
+            <video controls autoplay muted loop width="100%">
+              <source src="sample-video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <p class="hint">
+              Put a file named <code>sample-video.mp4</code> in the same folder.
+            </p>
+          </div>
+
+          <div class="media-block">
+            <h3>Audio</h3>
+            <!-- Many browsers block autoplay audio unless muted or after user interaction -->
+            <audio controls autoplay>
+              <source src="sample-audio.mp3" type="audio/mpeg" />
+              Your browser does not support the audio tag.
+            </audio>
+            <p class="hint">
+              Put a file named <code>sample-audio.mp3</code> in the same folder.
+              If autoplay audio doesn’t start, click Play once (browser policy).
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="api">
+        <h2>Dynamic Content (Loaded by JavaScript)</h2>
+
+        <!-- ✅ This is the area in <body> for dynamically loaded content -->
+        <div id="dynamicContent" class="dynamic">
+          <p class="hint">Click “Load API Posts” to fetch and display data here.</p>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Portfolio Practice</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
